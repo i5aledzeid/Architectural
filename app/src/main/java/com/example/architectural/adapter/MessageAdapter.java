@@ -56,4 +56,9 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
             textView3 = itemView.findViewById(R.id.textView3);
         }
     }
+
+    public void addMessage(MessageModel messageModel) {
+        messageModelArrayList.add(0, messageModel);
+        notifyDataSetChanged();
+    }
 }
